@@ -24,11 +24,4 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        run: mvn clean test
-
-      - name: Publish Test Report
-        uses: scacap/action-surefire-report@v1
-        if: always()
-        with:
-          report_paths: '**/target/surefire-reports/*.xml'
-
+        run: mvn clean install
