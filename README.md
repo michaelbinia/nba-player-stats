@@ -19,18 +19,26 @@ This API provides a set of RESTful endpoints for accessing and managing NBA play
 
 * Docker
 * Java 17
+* Maven
+
 
 ### Running the Application
 
-1. Build the Docker image:
+1. Build the project with Maven:
+   ```bash
+   mvn clean install
+   ```
+
+2. Build the Docker image:
    ```bash
    docker build -t nba-stats-app:latest .
    ```
 
-2. Run the Docker container:
+3. Run the Docker container:
    ```bash
    docker run -p 8080:8080 nba-stats-app:latest
    ```
+
 ### **Build and Run using docker-compose:**
    ```bash
    docker-compose up -d --build
@@ -58,8 +66,7 @@ Swagger UI: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagge
     ```json
     [
         {"id": "1", "name": "LeBron James"},
-        {"id": "2", "name": "Stephen Curry"},
-        ...
+        {"id": "2", "name": "Stephen Curry"}
     ]
     ```
 
